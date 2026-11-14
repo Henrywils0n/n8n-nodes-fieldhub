@@ -1,0 +1,4 @@
+# Keep schema hashes and generated-file checks identical across operating systems.
+* text=auto eol=lf
+*.png binary
+*.tgz binary

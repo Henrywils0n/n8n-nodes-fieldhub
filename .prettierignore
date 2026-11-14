@@ -1,0 +1,6 @@
+# Preserve the exact upstream snapshot and deterministic generator output.
+api/fieldhub-openapi.json
+nodes/Fieldhub/generated/catalog.json
+docs/operations.md
+dist/
+package-lock.json

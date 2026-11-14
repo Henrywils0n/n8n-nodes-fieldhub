@@ -1,37 +1,78 @@
 {
-  "name": "n8n-nodes-fieldhub",
-  "version": "0.1.0",
-  "description": "",
-  "license": "MIT",
-  "homepage": "",
-  "keywords": ["n8n-community-node-package"],
-  "author": { "name": "Henry Wilson", "email": "20hgww@queensu.ca" },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
-  },
-  "scripts": {
-    "build": "n8n-node build",
-    "build:watch": "tsc --watch",
-    "dev": "n8n-node dev",
-    "lint": "n8n-node lint",
-    "lint:fix": "n8n-node lint --fix",
-    "release": "n8n-node release",
-    "prepublishOnly": "n8n-node prerelease"
-  },
-  "files": ["dist"],
-  "n8n": {
-    "n8nNodesApiVersion": 1,
-    "strict": true,
-    "credentials": ["dist/credentials/FieldhubApi.credentials.js"],
-    "nodes": ["dist/nodes/Fieldhub/Fieldhub.node.js"]
-  },
-  "devDependencies": {
-    "@n8n/node-cli": "*",
-    "eslint": "9.32.0",
-    "prettier": "3.6.2",
-    "release-it": "^19.0.4",
-    "typescript": "5.9.2"
-  },
-  "peerDependencies": { "n8n-workflow": "*" }
+	"name": "n8n-nodes-fieldhub",
+	"version": "0.1.3",
+	"description": "FieldHub API actions for n8n, including CRM, work orders, inventory, billing and reporting",
+	"license": "MIT",
+	"homepage": "https://github.com/Henrywils0n/n8n-nodes-fieldhub#readme",
+	"keywords": [
+		"n8n-community-node-package"
+	],
+	"author": {
+		"name": "Henry Wilson",
+		"email": "henrygwwilson@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Henrywils0n/n8n-nodes-fieldhub.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"generate": "node scripts/generate.mjs",
+		"generate:check": "node scripts/generate.mjs --check",
+		"typecheck": "tsc --noEmit --incremental false",
+		"test": "node --test tests/*.test.cjs",
+		"check": "npm run check:content && npm run lint && npm run build && npm run generate:check && npm run typecheck && npm test && npm run test:package",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease && npm run check",
+		"test:package": "node scripts/test-package-install.cjs",
+		"check:content": "node scripts/check-publication-content.cjs"
+	},
+	"files": [
+		"dist",
+		"!dist/*.tsbuildinfo",
+		"!dist/package.json",
+		"!dist/credentials/FieldhubOAuth2Api.credentials.*",
+		"docs/operations.md",
+		"CHANGELOG.md",
+		"docs/publishing.md",
+		"examples/*.json",
+		"docs/api-upgrade-10.4.32.md"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/FieldhubApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Fieldhub/Fieldhub.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.48.5",
+		"eslint": "9.32.0",
+		"n8n-workflow": "2.39.3",
+		"prettier": "3.6.2",
+		"release-it": "^19.0.4",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	},
+	"peerDependenciesMeta": {
+		"n8n-workflow": {
+			"optional": true
+		}
+	},
+	"bugs": {
+		"url": "https://github.com/Henrywils0n/n8n-nodes-fieldhub/issues"
+	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	}
 }

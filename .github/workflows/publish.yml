@@ -17,7 +17,8 @@
 #
 # ─── ONE-TIME SETUP ────────────────────────────────────────────────────────────
 #
-# Option A — OIDC Trusted Publishing (recommended, no long-lived secrets):
+# See docs/publishing.md for first-publication setup and acceptance checks.
+# Option A — OIDC Trusted Publishing (after the package exists on npm):
 #   1. Log in to npmjs.com and open your package's settings.
 #   2. Under "Publish access" → "Trusted Publishers", click "Add a publisher".
 #   3. Select GitHub Actions and fill in:
@@ -25,12 +26,16 @@
 #        Repository name:  <your-repo-name>
 #        Workflow name:    publish.yml
 #        Environment:      (leave blank unless you use GitHub Environments)
-#   4. Leave the NPM_TOKEN secret unset in this repository. GitHub's OIDC
+#   4. Enable the trusted publisher allowed action "npm publish".
+#      New configurations otherwise permit staged publishing only.
+#      Complete the first trusted publish within 2 days of creating it.
+#   5. Leave the NPM_TOKEN secret unset in this repository. GitHub's OIDC
 #      token is used instead — no secret ever touches your repo settings.
 #
-# Option B — npm Automation Token (fallback):
+# Option B — first publication using a short-lived granular token:
 #   1. On npmjs.com: Access Tokens → Generate New Token → Granular Access Token.
-#      Scope it to this package with "Read and write" publish permission.
+#      Grant permission to create this new package and publish with 2FA bypass.
+#      Use the shortest practical expiry, then revoke it after OIDC is set up.
 #   2. In GitHub: Settings → Secrets and variables → Actions → New secret.
 #      Name it NPM_TOKEN and paste the token value.
 #
@@ -40,8 +45,7 @@
 # ─── TAG CONVENTION ────────────────────────────────────────────────────────────
 #
 # This workflow triggers on tags matching "*.*.*" (e.g. 0.2.0).
-# If you prefer tags with a "v" prefix (e.g. v0.2.0), change the filter to:
-#   tags: ['v*.*.*']
+# Use unprefixed tags: the version assertion requires an exact package.json match.
 #
 # ─── RELEASE PROCESS ───────────────────────────────────────────────────────────
 #
@@ -50,7 +54,9 @@
 #   npm run release
 #
 # This will lint, build, prompt for a version bump, update the changelog,
-# commit, tag, and push — which triggers this workflow to publish to npm.
+# commit, tag, and push — which triggers this workflow. Immediately before
+# npm publication, prepublishOnly runs the complete npm run check suite
+# against this tag's source. No passing main-branch CI run is assumed.
 
 name: Publish
 
@@ -58,7 +64,7 @@ on:
   push:
     tags:
       # Matches 0.1.0, 1.2.3, 2.0.0-rc.1, etc.
-      # See "TAG CONVENTION" above if you prefer tags with a "v" prefix.
+      # The version assertion below rejects prefixed or non-version tags.
       - '*.*.*'
 
 jobs:
@@ -78,22 +84,30 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 'lts/*'
+          node-version: '24'
           cache: 'npm'
 
       - name: Install dependencies
         run: 'npm ci'
 
+      - name: Verify tag matches package version
+        run: node -e "const assert = require('node:assert/strict'); assert.equal(process.env.GITHUB_REF_NAME, require('./package.json').version, 'Release tag must match package.json version');"
+
       - name: Release
         # Publishes to npm with a provenance attestation (requires id-token: write above).
-        # Lint and build run automatically as part of the release process.
+        # The native CLI runs lint/build and enforces its release-only guard.
+        # npm's prepublishOnly hook then runs npm run check against the tagged
+        # checkout: lint, build, generation, types, tests and package installation.
+        # A failure stops npm publication, including direct CLI release calls.
         #
         # Option A (OIDC): leave NPM_TOKEN unset — the token step is skipped and
         #   npm uses the OIDC exchange instead.
         # Option B (token): set NPM_TOKEN in repo secrets — it is written to
         #   .npmrc here before publishing.
         run: |
-          [ -n "$NPM_TOKEN" ] && npm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
+          if [ -n "$NPM_TOKEN" ]; then
+            npm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
+          fi
           npm run release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

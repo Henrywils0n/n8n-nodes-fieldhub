@@ -1,0 +1,1592 @@
+[
+	{
+		"id": "accounts_list",
+		"method": "GET",
+		"path": "/v3/accounts/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_create",
+		"method": "POST",
+		"path": "/v3/accounts/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_addresses_list",
+		"method": "GET",
+		"path": "/v3/accounts/{account_id}/addresses/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_contacts_list",
+		"method": "GET",
+		"path": "/v3/accounts/{account_id}/contacts/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_contacts_retrieve",
+		"method": "GET",
+		"path": "/v3/accounts/{account_id}/contacts/{id}/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_contacts_link_create",
+		"method": "POST",
+		"path": "/v3/accounts/{account_id}/contacts/link/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_sites_list",
+		"method": "GET",
+		"path": "/v3/accounts/{account_id}/sites/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_sites_retrieve",
+		"method": "GET",
+		"path": "/v3/accounts/{account_id}/sites/{id}/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_sites_link_create",
+		"method": "POST",
+		"path": "/v3/accounts/{account_id}/sites/link/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_sites_unlink_create",
+		"method": "POST",
+		"path": "/v3/accounts/{account_id}/sites/unlink/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_retrieve",
+		"method": "GET",
+		"path": "/v3/accounts/{id}/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_update",
+		"method": "PUT",
+		"path": "/v3/accounts/{id}/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_partial_update",
+		"method": "PATCH",
+		"path": "/v3/accounts/{id}/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_delivery_methods_list",
+		"method": "GET",
+		"path": "/v3/accounts/delivery-methods/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_industries_list",
+		"method": "GET",
+		"path": "/v3/accounts/industries/",
+		"tag": "Account Industries"
+	},
+	{
+		"id": "accounts_industries_retrieve",
+		"method": "GET",
+		"path": "/v3/accounts/industries/{id}/",
+		"tag": "Account Industries"
+	},
+	{
+		"id": "accounts_quick_create",
+		"method": "POST",
+		"path": "/v3/accounts/quick/",
+		"tag": "Accounts"
+	},
+	{
+		"id": "accounts_sources_list",
+		"method": "GET",
+		"path": "/v3/accounts/sources/",
+		"tag": "Account Sources"
+	},
+	{
+		"id": "accounts_sources_retrieve",
+		"method": "GET",
+		"path": "/v3/accounts/sources/{id}/",
+		"tag": "Account Sources"
+	},
+	{
+		"id": "accounts_statuses_list",
+		"method": "GET",
+		"path": "/v3/accounts/statuses/",
+		"tag": "Account Statuses"
+	},
+	{
+		"id": "accounts_statuses_retrieve",
+		"method": "GET",
+		"path": "/v3/accounts/statuses/{id}/",
+		"tag": "Account Statuses"
+	},
+	{
+		"id": "accounts_types_list",
+		"method": "GET",
+		"path": "/v3/accounts/types/",
+		"tag": "Account Types"
+	},
+	{
+		"id": "accounts_types_retrieve",
+		"method": "GET",
+		"path": "/v3/accounts/types/{id}/",
+		"tag": "Account Types"
+	},
+	{
+		"id": "assumptions_list",
+		"method": "GET",
+		"path": "/v3/assumptions/",
+		"tag": "Assumptions"
+	},
+	{
+		"id": "assumptions_create",
+		"method": "POST",
+		"path": "/v3/assumptions/",
+		"tag": "Assumptions"
+	},
+	{
+		"id": "assumptions_retrieve",
+		"method": "GET",
+		"path": "/v3/assumptions/{id}/",
+		"tag": "Assumptions"
+	},
+	{
+		"id": "assumptions_update",
+		"method": "PUT",
+		"path": "/v3/assumptions/{id}/",
+		"tag": "Assumptions"
+	},
+	{
+		"id": "assumptions_partial_update",
+		"method": "PATCH",
+		"path": "/v3/assumptions/{id}/",
+		"tag": "Assumptions"
+	},
+	{
+		"id": "bank_accounts_list",
+		"method": "GET",
+		"path": "/v3/bank/accounts/",
+		"tag": "Bank Accounts"
+	},
+	{
+		"id": "bank_accounts_retrieve",
+		"method": "GET",
+		"path": "/v3/bank/accounts/{id}/",
+		"tag": "Bank Accounts"
+	},
+	{
+		"id": "bank_checks_list",
+		"method": "GET",
+		"path": "/v3/bank/checks/",
+		"tag": "Bank Checks"
+	},
+	{
+		"id": "bank_checks_retrieve",
+		"method": "GET",
+		"path": "/v3/bank/checks/{id}/",
+		"tag": "Bank Checks"
+	},
+	{
+		"id": "billing_rules_list",
+		"method": "GET",
+		"path": "/v3/billing-rules/",
+		"tag": "Billing Rules"
+	},
+	{
+		"id": "billing_rules_create",
+		"method": "POST",
+		"path": "/v3/billing-rules/",
+		"tag": "Billing Rules"
+	},
+	{
+		"id": "billing_rules_retrieve",
+		"method": "GET",
+		"path": "/v3/billing-rules/{id}/",
+		"tag": "Billing Rules"
+	},
+	{
+		"id": "billing_rules_update",
+		"method": "PUT",
+		"path": "/v3/billing-rules/{id}/",
+		"tag": "Billing Rules"
+	},
+	{
+		"id": "billing_rules_archive_create",
+		"method": "POST",
+		"path": "/v3/billing-rules/{id}/archive/",
+		"tag": "Billing Rules"
+	},
+	{
+		"id": "billing_rules_unarchive_create",
+		"method": "POST",
+		"path": "/v3/billing-rules/{id}/unarchive/",
+		"tag": "Billing Rules"
+	},
+	{
+		"id": "billing_rules_items_create",
+		"method": "POST",
+		"path": "/v3/billing-rules/{rule_id}/items/",
+		"tag": "Billing Rules"
+	},
+	{
+		"id": "billing_rules_items_retrieve",
+		"method": "GET",
+		"path": "/v3/billing-rules/{rule_id}/items/{item_id}/",
+		"tag": "Billing Rules"
+	},
+	{
+		"id": "billing_rules_items_update",
+		"method": "PUT",
+		"path": "/v3/billing-rules/{rule_id}/items/{item_id}/",
+		"tag": "Billing Rules"
+	},
+	{
+		"id": "business_units_list",
+		"method": "GET",
+		"path": "/v3/business-units/",
+		"tag": "Business Units"
+	},
+	{
+		"id": "business_units_retrieve",
+		"method": "GET",
+		"path": "/v3/business-units/{id}/",
+		"tag": "Business Units"
+	},
+	{
+		"id": "centralstations_list",
+		"method": "GET",
+		"path": "/v3/centralstations/",
+		"tag": "Central Station"
+	},
+	{
+		"id": "centralstations_retrieve",
+		"method": "GET",
+		"path": "/v3/centralstations/{id}/",
+		"tag": "Central Station"
+	},
+	{
+		"id": "centralstations_paneltypes_list",
+		"method": "GET",
+		"path": "/v3/centralstations/paneltypes/",
+		"tag": "Central Station"
+	},
+	{
+		"id": "centralstations_paneltypes_retrieve",
+		"method": "GET",
+		"path": "/v3/centralstations/paneltypes/{id}/",
+		"tag": "Central Station"
+	},
+	{
+		"id": "contacts_list",
+		"method": "GET",
+		"path": "/v3/contacts/",
+		"tag": "Contacts"
+	},
+	{
+		"id": "contacts_create",
+		"method": "POST",
+		"path": "/v3/contacts/",
+		"tag": "Contacts"
+	},
+	{
+		"id": "contacts_retrieve",
+		"method": "GET",
+		"path": "/v3/contacts/{id}/",
+		"tag": "Contacts"
+	},
+	{
+		"id": "contacts_update",
+		"method": "PUT",
+		"path": "/v3/contacts/{id}/",
+		"tag": "Contacts"
+	},
+	{
+		"id": "contacts_partial_update",
+		"method": "PATCH",
+		"path": "/v3/contacts/{id}/",
+		"tag": "Contacts"
+	},
+	{
+		"id": "contacts_archive_create",
+		"method": "POST",
+		"path": "/v3/contacts/{id}/archive/",
+		"tag": "Contacts"
+	},
+	{
+		"id": "contacts_unarchive_create",
+		"method": "POST",
+		"path": "/v3/contacts/{id}/unarchive/",
+		"tag": "Contacts"
+	},
+	{
+		"id": "contacts_roles_list",
+		"method": "GET",
+		"path": "/v3/contacts/roles/",
+		"tag": "Contacts"
+	},
+	{
+		"id": "events_groups_list",
+		"method": "GET",
+		"path": "/v3/events/groups/",
+		"tag": "Events and Webhooks"
+	},
+	{
+		"id": "events_groups_retrieve",
+		"method": "GET",
+		"path": "/v3/events/groups/{id}/",
+		"tag": "Events and Webhooks"
+	},
+	{
+		"id": "events_handlers_list",
+		"method": "GET",
+		"path": "/v3/events/handlers/",
+		"tag": "Events and Webhooks"
+	},
+	{
+		"id": "events_handlers_retrieve",
+		"method": "GET",
+		"path": "/v3/events/handlers/{id}/",
+		"tag": "Events and Webhooks"
+	},
+	{
+		"id": "events_handlers_update",
+		"method": "PUT",
+		"path": "/v3/events/handlers/{id}/",
+		"tag": "Events and Webhooks"
+	},
+	{
+		"id": "events_handlers_partial_update",
+		"method": "PATCH",
+		"path": "/v3/events/handlers/{id}/",
+		"tag": "Events and Webhooks"
+	},
+	{
+		"id": "events_handlers_archive_update",
+		"method": "PUT",
+		"path": "/v3/events/handlers/{id}/archive/",
+		"tag": "Events and Webhooks"
+	},
+	{
+		"id": "events_handlers_disable_create",
+		"method": "POST",
+		"path": "/v3/events/handlers/{id}/disable/",
+		"tag": "Events and Webhooks"
+	},
+	{
+		"id": "events_handlers_enable_create",
+		"method": "POST",
+		"path": "/v3/events/handlers/{id}/enable/",
+		"tag": "Events and Webhooks"
+	},
+	{
+		"id": "events_handlers_unarchive_update",
+		"method": "PUT",
+		"path": "/v3/events/handlers/{id}/unarchive/",
+		"tag": "Events and Webhooks"
+	},
+	{
+		"id": "events_handlers_add_create",
+		"method": "POST",
+		"path": "/v3/events/handlers/add/{handler_slug}/",
+		"tag": "Events and Webhooks"
+	},
+	{
+		"id": "events_types_list",
+		"method": "GET",
+		"path": "/v3/events/types/",
+		"tag": "Events and Webhooks"
+	},
+	{
+		"id": "events_types_retrieve",
+		"method": "GET",
+		"path": "/v3/events/types/{id}/",
+		"tag": "Events and Webhooks"
+	},
+	{
+		"id": "expenses_list",
+		"method": "GET",
+		"path": "/v3/expenses/",
+		"tag": "Expenses"
+	},
+	{
+		"id": "expenses_create",
+		"method": "POST",
+		"path": "/v3/expenses/",
+		"tag": "Expenses"
+	},
+	{
+		"id": "expenses_retrieve",
+		"method": "GET",
+		"path": "/v3/expenses/{id}/",
+		"tag": "Expenses"
+	},
+	{
+		"id": "expenses_update",
+		"method": "PUT",
+		"path": "/v3/expenses/{id}/",
+		"tag": "Expenses"
+	},
+	{
+		"id": "expenses_partial_update",
+		"method": "PATCH",
+		"path": "/v3/expenses/{id}/",
+		"tag": "Expenses"
+	},
+	{
+		"id": "expenses_reverse_create",
+		"method": "POST",
+		"path": "/v3/expenses/{id}/reverse/",
+		"tag": "Expenses"
+	},
+	{
+		"id": "expenses_void_create",
+		"method": "POST",
+		"path": "/v3/expenses/{id}/void/",
+		"tag": "Expenses"
+	},
+	{
+		"id": "flows_list",
+		"method": "GET",
+		"path": "/v3/flows/",
+		"tag": "Flows"
+	},
+	{
+		"id": "flows_timeline_list",
+		"method": "GET",
+		"path": "/v3/flows/{flow_id}/timeline/",
+		"tag": "Flow TimeLine"
+	},
+	{
+		"id": "flows_timeline_create",
+		"method": "POST",
+		"path": "/v3/flows/{flow_id}/timeline/",
+		"tag": "Flow TimeLine"
+	},
+	{
+		"id": "flows_timeline_retrieve",
+		"method": "GET",
+		"path": "/v3/flows/{flow_id}/timeline/{id}/",
+		"tag": "Flow TimeLine"
+	},
+	{
+		"id": "flows_timeline_comment_create",
+		"method": "POST",
+		"path": "/v3/flows/{flow_id}/timeline/comment/",
+		"tag": "Flow TimeLine"
+	},
+	{
+		"id": "flows_timeline_record_types_retrieve",
+		"method": "GET",
+		"path": "/v3/flows/{flow_id}/timeline/record-types/",
+		"tag": "Flow TimeLine"
+	},
+	{
+		"id": "flows_retrieve",
+		"method": "GET",
+		"path": "/v3/flows/{id}/",
+		"tag": "Flows"
+	},
+	{
+		"id": "flows_update",
+		"method": "PUT",
+		"path": "/v3/flows/{id}/",
+		"tag": "Flows"
+	},
+	{
+		"id": "flows_partial_update",
+		"method": "PATCH",
+		"path": "/v3/flows/{id}/",
+		"tag": "Flows"
+	},
+	{
+		"id": "flows_archive_create",
+		"method": "POST",
+		"path": "/v3/flows/{id}/archive/",
+		"tag": "Flows"
+	},
+	{
+		"id": "flows_assign_partial_update",
+		"method": "PATCH",
+		"path": "/v3/flows/{id}/assign/",
+		"tag": "Flows"
+	},
+	{
+		"id": "flows_cancel_partial_update",
+		"method": "PATCH",
+		"path": "/v3/flows/{id}/cancel/",
+		"tag": "Flows"
+	},
+	{
+		"id": "flows_follow_partial_update",
+		"method": "PATCH",
+		"path": "/v3/flows/{id}/follow/",
+		"tag": "Flows"
+	},
+	{
+		"id": "flows_next_action_date_partial_update",
+		"method": "PATCH",
+		"path": "/v3/flows/{id}/next-action-date/",
+		"tag": "Flows"
+	},
+	{
+		"id": "flows_next_allowed_phases_list",
+		"method": "GET",
+		"path": "/v3/flows/{id}/next-allowed-phases/",
+		"tag": "Flows"
+	},
+	{
+		"id": "flows_start_next_phase_partial_update",
+		"method": "PATCH",
+		"path": "/v3/flows/{id}/start-next-phase/",
+		"tag": "Flows"
+	},
+	{
+		"id": "flows_unassign_partial_update",
+		"method": "PATCH",
+		"path": "/v3/flows/{id}/unassign/",
+		"tag": "Flows"
+	},
+	{
+		"id": "flows_unfollow_partial_update",
+		"method": "PATCH",
+		"path": "/v3/flows/{id}/unfollow/",
+		"tag": "Flows"
+	},
+	{
+		"id": "flows_processes_list",
+		"method": "GET",
+		"path": "/v3/flows/processes/",
+		"tag": "Flow Processes"
+	},
+	{
+		"id": "flows_processes_retrieve",
+		"method": "GET",
+		"path": "/v3/flows/processes/{id}/",
+		"tag": "Flow Processes"
+	},
+	{
+		"id": "flows_start_create",
+		"method": "POST",
+		"path": "/v3/flows/start/{model}/{id}/",
+		"tag": "Flows"
+	},
+	{
+		"id": "income_statement_report_create",
+		"method": "POST",
+		"path": "/v3/income-statement/",
+		"tag": "Income Statement Report"
+	},
+	{
+		"id": "income_statement_report_rows",
+		"method": "GET",
+		"path": "/v3/income-statement/{session_uuid}/rows/",
+		"tag": "Income Statement Report"
+	},
+	{
+		"id": "income_statement_report_status",
+		"method": "GET",
+		"path": "/v3/income-statement/{session_uuid}/status/",
+		"tag": "Income Statement Report"
+	},
+	{
+		"id": "income_statement_report_feed",
+		"method": "GET",
+		"path": "/v3/income-statement/feed/",
+		"tag": "Income Statement Report"
+	},
+	{
+		"id": "inspections_list",
+		"method": "GET",
+		"path": "/v3/inspections/",
+		"tag": "Inspection Maintenances"
+	},
+	{
+		"id": "inspections_retrieve",
+		"method": "GET",
+		"path": "/v3/inspections/{id}/",
+		"tag": "Inspection Maintenances"
+	},
+	{
+		"id": "inspections_frequencies_list",
+		"method": "GET",
+		"path": "/v3/inspections/frequencies/",
+		"tag": "Inspection Maintenances"
+	},
+	{
+		"id": "inspections_frequencies_retrieve",
+		"method": "GET",
+		"path": "/v3/inspections/frequencies/{id}/",
+		"tag": "Inspection Maintenances"
+	},
+	{
+		"id": "inspections_types_list",
+		"method": "GET",
+		"path": "/v3/inspections/types/",
+		"tag": "Inspection Maintenances"
+	},
+	{
+		"id": "inspections_types_retrieve",
+		"method": "GET",
+		"path": "/v3/inspections/types/{id}/",
+		"tag": "Inspection Maintenances"
+	},
+	{
+		"id": "invoices_list",
+		"method": "GET",
+		"path": "/v3/invoices/",
+		"tag": "Invoices"
+	},
+	{
+		"id": "invoices_create",
+		"method": "POST",
+		"path": "/v3/invoices/",
+		"tag": "Invoices"
+	},
+	{
+		"id": "invoices_retrieve",
+		"method": "GET",
+		"path": "/v3/invoices/{id}/",
+		"tag": "Invoices"
+	},
+	{
+		"id": "invoices_update",
+		"method": "PUT",
+		"path": "/v3/invoices/{id}/",
+		"tag": "Invoices"
+	},
+	{
+		"id": "invoices_partial_update",
+		"method": "PATCH",
+		"path": "/v3/invoices/{id}/",
+		"tag": "Invoices"
+	},
+	{
+		"id": "invoices_reverse_create",
+		"method": "POST",
+		"path": "/v3/invoices/{id}/reverse/",
+		"tag": "Invoices"
+	},
+	{
+		"id": "invoices_void_create",
+		"method": "POST",
+		"path": "/v3/invoices/{id}/void/",
+		"tag": "Invoices"
+	},
+	{
+		"id": "labors_list",
+		"method": "GET",
+		"path": "/v3/labors/",
+		"tag": "Labors"
+	},
+	{
+		"id": "labors_retrieve",
+		"method": "GET",
+		"path": "/v3/labors/{id}/",
+		"tag": "Labors"
+	},
+	{
+		"id": "materials_list",
+		"method": "GET",
+		"path": "/v3/materials/",
+		"tag": "Materials"
+	},
+	{
+		"id": "materials_create",
+		"method": "POST",
+		"path": "/v3/materials/",
+		"tag": "Materials"
+	},
+	{
+		"id": "materials_retrieve",
+		"method": "GET",
+		"path": "/v3/materials/{id}/",
+		"tag": "Materials"
+	},
+	{
+		"id": "materials_update",
+		"method": "PUT",
+		"path": "/v3/materials/{id}/",
+		"tag": "Materials"
+	},
+	{
+		"id": "materials_partial_update",
+		"method": "PATCH",
+		"path": "/v3/materials/{id}/",
+		"tag": "Materials"
+	},
+	{
+		"id": "materials_destroy",
+		"method": "DELETE",
+		"path": "/v3/materials/{id}/",
+		"tag": "Materials"
+	},
+	{
+		"id": "materials_alternative_prices_list",
+		"method": "GET",
+		"path": "/v3/materials/alternative-prices/",
+		"tag": "Materials"
+	},
+	{
+		"id": "materials_alternative_prices_retrieve",
+		"method": "GET",
+		"path": "/v3/materials/alternative-prices/{id}/",
+		"tag": "Materials"
+	},
+	{
+		"id": "materials_catalogs_list",
+		"method": "GET",
+		"path": "/v3/materials/catalogs/",
+		"tag": "Materials Catalogs"
+	},
+	{
+		"id": "materials_catalogs_create",
+		"method": "POST",
+		"path": "/v3/materials/catalogs/",
+		"tag": "Materials Catalogs"
+	},
+	{
+		"id": "materials_catalogs_retrieve",
+		"method": "GET",
+		"path": "/v3/materials/catalogs/{id}/",
+		"tag": "Materials Catalogs"
+	},
+	{
+		"id": "materials_catalogs_update",
+		"method": "PUT",
+		"path": "/v3/materials/catalogs/{id}/",
+		"tag": "Materials Catalogs"
+	},
+	{
+		"id": "materials_catalogs_partial_update",
+		"method": "PATCH",
+		"path": "/v3/materials/catalogs/{id}/",
+		"tag": "Materials Catalogs"
+	},
+	{
+		"id": "materials_catalogs_destroy",
+		"method": "DELETE",
+		"path": "/v3/materials/catalogs/{id}/",
+		"tag": "Materials Catalogs"
+	},
+	{
+		"id": "material-catalog-tree-list",
+		"method": "GET",
+		"path": "/v3/materials/catalogs/tree/",
+		"tag": "Materials Catalogs Tree"
+	},
+	{
+		"id": "materials_extended_list",
+		"method": "GET",
+		"path": "/v3/materials/extended/",
+		"tag": "Materials"
+	},
+	{
+		"id": "materials_manufacturers_list",
+		"method": "GET",
+		"path": "/v3/materials/manufacturers/",
+		"tag": "Material Manufacturers"
+	},
+	{
+		"id": "materials_manufacturers_create",
+		"method": "POST",
+		"path": "/v3/materials/manufacturers/",
+		"tag": "Material Manufacturers"
+	},
+	{
+		"id": "materials_manufacturers_retrieve",
+		"method": "GET",
+		"path": "/v3/materials/manufacturers/{id}/",
+		"tag": "Material Manufacturers"
+	},
+	{
+		"id": "materials_manufacturers_update",
+		"method": "PUT",
+		"path": "/v3/materials/manufacturers/{id}/",
+		"tag": "Material Manufacturers"
+	},
+	{
+		"id": "materials_manufacturers_partial_update",
+		"method": "PATCH",
+		"path": "/v3/materials/manufacturers/{id}/",
+		"tag": "Material Manufacturers"
+	},
+	{
+		"id": "materials_manufacturers_destroy",
+		"method": "DELETE",
+		"path": "/v3/materials/manufacturers/{id}/",
+		"tag": "Material Manufacturers"
+	},
+	{
+		"id": "non_inventory_types_list",
+		"method": "GET",
+		"path": "/v3/non-inventory-types/",
+		"tag": "Non Inventory Types"
+	},
+	{
+		"id": "non_inventory_types_retrieve",
+		"method": "GET",
+		"path": "/v3/non-inventory-types/{id}/",
+		"tag": "Non Inventory Types"
+	},
+	{
+		"id": "opportunities_list",
+		"method": "GET",
+		"path": "/v3/opportunities/",
+		"tag": "Opportunities"
+	},
+	{
+		"id": "opportunities_create",
+		"method": "POST",
+		"path": "/v3/opportunities/",
+		"tag": "Opportunities"
+	},
+	{
+		"id": "opportunities_retrieve",
+		"method": "GET",
+		"path": "/v3/opportunities/{id}/",
+		"tag": "Opportunities"
+	},
+	{
+		"id": "opportunities_quick_create",
+		"method": "POST",
+		"path": "/v3/opportunities/quick/",
+		"tag": "Opportunities"
+	},
+	{
+		"id": "profile_retrieve",
+		"method": "GET",
+		"path": "/v3/profile/",
+		"tag": "Profile"
+	},
+	{
+		"id": "recurrings_billing_groups_list",
+		"method": "GET",
+		"path": "/v3/recurrings/billing-groups/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billing_groups_create",
+		"method": "POST",
+		"path": "/v3/recurrings/billing-groups/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billing_groups_billings_list",
+		"method": "GET",
+		"path": "/v3/recurrings/billing-groups/{group_id}/billings/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billing_groups_billings_retrieve",
+		"method": "GET",
+		"path": "/v3/recurrings/billing-groups/{group_id}/billings/{id}/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billing_groups_retrieve",
+		"method": "GET",
+		"path": "/v3/recurrings/billing-groups/{id}/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billing_groups_update",
+		"method": "PUT",
+		"path": "/v3/recurrings/billing-groups/{id}/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billing_groups_partial_update",
+		"method": "PATCH",
+		"path": "/v3/recurrings/billing-groups/{id}/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billings_list",
+		"method": "GET",
+		"path": "/v3/recurrings/billings/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billings_create",
+		"method": "POST",
+		"path": "/v3/recurrings/billings/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billings_changes_list",
+		"method": "GET",
+		"path": "/v3/recurrings/billings/{billing_id}/changes/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billings_changes_create",
+		"method": "POST",
+		"path": "/v3/recurrings/billings/{billing_id}/changes/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billings_changes_retrieve",
+		"method": "GET",
+		"path": "/v3/recurrings/billings/{billing_id}/changes/{id}/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billings_periods_list",
+		"method": "GET",
+		"path": "/v3/recurrings/billings/{billing_id}/periods/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billings_periods_retrieve",
+		"method": "GET",
+		"path": "/v3/recurrings/billings/{billing_id}/periods/{id}/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billings_retrieve",
+		"method": "GET",
+		"path": "/v3/recurrings/billings/{id}/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billings_update",
+		"method": "PUT",
+		"path": "/v3/recurrings/billings/{id}/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billings_partial_update",
+		"method": "PATCH",
+		"path": "/v3/recurrings/billings/{id}/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_billings_terminate_create",
+		"method": "POST",
+		"path": "/v3/recurrings/billings/{id}/terminate/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_profiles_list",
+		"method": "GET",
+		"path": "/v3/recurrings/profiles/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_profiles_retrieve",
+		"method": "GET",
+		"path": "/v3/recurrings/profiles/{id}/",
+		"tag": "Recurrings"
+	},
+	{
+		"id": "recurrings_services_list",
+		"method": "GET",
+		"path": "/v3/recurrings/services/",
+		"tag": "Recurring Services"
+	},
+	{
+		"id": "recurrings_services_retrieve",
+		"method": "GET",
+		"path": "/v3/recurrings/services/{id}/",
+		"tag": "Recurring Services"
+	},
+	{
+		"id": "register_classes_list",
+		"method": "GET",
+		"path": "/v3/register/classes/",
+		"tag": "Accounting Registers"
+	},
+	{
+		"id": "register_classes_retrieve",
+		"method": "GET",
+		"path": "/v3/register/classes/{id}/",
+		"tag": "Accounting Registers"
+	},
+	{
+		"id": "register_profiles_list",
+		"method": "GET",
+		"path": "/v3/register/profiles/",
+		"tag": "Accounting Registers"
+	},
+	{
+		"id": "register_profiles_retrieve",
+		"method": "GET",
+		"path": "/v3/register/profiles/{id}/",
+		"tag": "Accounting Registers"
+	},
+	{
+		"id": "register_profiles_by_slug_retrieve",
+		"method": "GET",
+		"path": "/v3/register/profiles/by-slug/{slug}/",
+		"tag": "Accounting Registers"
+	},
+	{
+		"id": "register_types_list",
+		"method": "GET",
+		"path": "/v3/register/types/",
+		"tag": "Accounting Registers"
+	},
+	{
+		"id": "register_types_retrieve",
+		"method": "GET",
+		"path": "/v3/register/types/{id}/",
+		"tag": "Accounting Registers"
+	},
+	{
+		"id": "registers_list",
+		"method": "GET",
+		"path": "/v3/registers/",
+		"tag": "Accounting Registers"
+	},
+	{
+		"id": "registers_retrieve",
+		"method": "GET",
+		"path": "/v3/registers/{id}/",
+		"tag": "Accounting Registers"
+	},
+	{
+		"id": "schedule_slots_list",
+		"method": "GET",
+		"path": "/v3/schedule/slots/",
+		"tag": "Schedule"
+	},
+	{
+		"id": "schedule_slots_retrieve",
+		"method": "GET",
+		"path": "/v3/schedule/slots/{id}/",
+		"tag": "Schedule"
+	},
+	{
+		"id": "sites_list",
+		"method": "GET",
+		"path": "/v3/sites/",
+		"tag": "Sites"
+	},
+	{
+		"id": "sites_create",
+		"method": "POST",
+		"path": "/v3/sites/",
+		"tag": "Sites"
+	},
+	{
+		"id": "sites_retrieve",
+		"method": "GET",
+		"path": "/v3/sites/{id}/",
+		"tag": "Sites"
+	},
+	{
+		"id": "sites_update",
+		"method": "PUT",
+		"path": "/v3/sites/{id}/",
+		"tag": "Sites"
+	},
+	{
+		"id": "sites_contacts_list",
+		"method": "GET",
+		"path": "/v3/sites/{site_id}/contacts/",
+		"tag": "Sites Contact"
+	},
+	{
+		"id": "sites_contacts_retrieve",
+		"method": "GET",
+		"path": "/v3/sites/{site_id}/contacts/{id}/",
+		"tag": "Sites Contact"
+	},
+	{
+		"id": "sites_contacts_link_create",
+		"method": "POST",
+		"path": "/v3/sites/{site_id}/contacts/link/",
+		"tag": "Sites Contact"
+	},
+	{
+		"id": "sitesystems_list",
+		"method": "GET",
+		"path": "/v3/sitesystems/",
+		"tag": "Site Systems"
+	},
+	{
+		"id": "sitesystems_create",
+		"method": "POST",
+		"path": "/v3/sitesystems/",
+		"tag": "Site Systems"
+	},
+	{
+		"id": "sitesystems_retrieve",
+		"method": "GET",
+		"path": "/v3/sitesystems/{id}/",
+		"tag": "Site Systems"
+	},
+	{
+		"id": "sitesystems_update",
+		"method": "PUT",
+		"path": "/v3/sitesystems/{id}/",
+		"tag": "Site Systems"
+	},
+	{
+		"id": "sitesystems_partial_update",
+		"method": "PATCH",
+		"path": "/v3/sitesystems/{id}/",
+		"tag": "Site Systems"
+	},
+	{
+		"id": "sitesystems_destroy",
+		"method": "DELETE",
+		"path": "/v3/sitesystems/{id}/",
+		"tag": "Site Systems"
+	},
+	{
+		"id": "sitesystems_devices_list",
+		"method": "GET",
+		"path": "/v3/sitesystems/{sitesystem_id}/devices/",
+		"tag": "Site Systems"
+	},
+	{
+		"id": "sitesystems_types_list",
+		"method": "GET",
+		"path": "/v3/sitesystems/types/",
+		"tag": "Site Systems"
+	},
+	{
+		"id": "sitesystems_types_retrieve",
+		"method": "GET",
+		"path": "/v3/sitesystems/types/{id}/",
+		"tag": "Site Systems"
+	},
+	{
+		"id": "sow_list",
+		"method": "GET",
+		"path": "/v3/sow/",
+		"tag": "Scope of Works"
+	},
+	{
+		"id": "sow_create",
+		"method": "POST",
+		"path": "/v3/sow/",
+		"tag": "Scope of Works"
+	},
+	{
+		"id": "sow_retrieve",
+		"method": "GET",
+		"path": "/v3/sow/{id}/",
+		"tag": "Scope of Works"
+	},
+	{
+		"id": "storage_files_list",
+		"method": "GET",
+		"path": "/v3/storage/files/",
+		"tag": "Storage"
+	},
+	{
+		"id": "storage_files_create",
+		"method": "POST",
+		"path": "/v3/storage/files/",
+		"tag": "Storage"
+	},
+	{
+		"id": "storage_files_retrieve",
+		"method": "GET",
+		"path": "/v3/storage/files/{id}/",
+		"tag": "Storage"
+	},
+	{
+		"id": "storage_files_update",
+		"method": "PUT",
+		"path": "/v3/storage/files/{id}/",
+		"tag": "Storage"
+	},
+	{
+		"id": "storage_files_partial_update",
+		"method": "PATCH",
+		"path": "/v3/storage/files/{id}/",
+		"tag": "Storage"
+	},
+	{
+		"id": "storage_files_download_retrieve",
+		"method": "GET",
+		"path": "/v3/storage/files/{id}/download/",
+		"tag": "Storage"
+	},
+	{
+		"id": "storage_files_upload_update",
+		"method": "PUT",
+		"path": "/v3/storage/files/{id}/upload/",
+		"tag": "Storage"
+	},
+	{
+		"id": "storage_tags_list",
+		"method": "GET",
+		"path": "/v3/storage/tags/",
+		"tag": "Storage"
+	},
+	{
+		"id": "storage_tags_create",
+		"method": "POST",
+		"path": "/v3/storage/tags/",
+		"tag": "Storage"
+	},
+	{
+		"id": "storage_tags_retrieve",
+		"method": "GET",
+		"path": "/v3/storage/tags/{id}/",
+		"tag": "Storage"
+	},
+	{
+		"id": "storage_tags_update",
+		"method": "PUT",
+		"path": "/v3/storage/tags/{id}/",
+		"tag": "Storage"
+	},
+	{
+		"id": "storage_tags_partial_update",
+		"method": "PATCH",
+		"path": "/v3/storage/tags/{id}/",
+		"tag": "Storage"
+	},
+	{
+		"id": "storage_tags_destroy",
+		"method": "DELETE",
+		"path": "/v3/storage/tags/{id}/",
+		"tag": "Storage"
+	},
+	{
+		"id": "taxes_groups_list",
+		"method": "GET",
+		"path": "/v3/taxes/groups/",
+		"tag": "Sales Taxes"
+	},
+	{
+		"id": "taxes_groups_retrieve",
+		"method": "GET",
+		"path": "/v3/taxes/groups/{id}/",
+		"tag": "Sales Taxes"
+	},
+	{
+		"id": "taxes_statuses_list",
+		"method": "GET",
+		"path": "/v3/taxes/statuses/",
+		"tag": "Sales Taxes"
+	},
+	{
+		"id": "taxes_statuses_retrieve",
+		"method": "GET",
+		"path": "/v3/taxes/statuses/{id}/",
+		"tag": "Sales Taxes"
+	},
+	{
+		"id": "taxes_zones_list",
+		"method": "GET",
+		"path": "/v3/taxes/zones/",
+		"tag": "Sales Taxes"
+	},
+	{
+		"id": "taxes_zones_retrieve",
+		"method": "GET",
+		"path": "/v3/taxes/zones/{id}/",
+		"tag": "Sales Taxes"
+	},
+	{
+		"id": "teams_list",
+		"method": "GET",
+		"path": "/v3/teams/",
+		"tag": "Teams"
+	},
+	{
+		"id": "teams_retrieve",
+		"method": "GET",
+		"path": "/v3/teams/{id}/",
+		"tag": "Teams"
+	},
+	{
+		"id": "vendor_bills_list",
+		"method": "GET",
+		"path": "/v3/vendor-bills/",
+		"tag": "Vendor Bills"
+	},
+	{
+		"id": "vendor_bills_create",
+		"method": "POST",
+		"path": "/v3/vendor-bills/",
+		"tag": "Vendor Bills"
+	},
+	{
+		"id": "vendor_bills_retrieve",
+		"method": "GET",
+		"path": "/v3/vendor-bills/{id}/",
+		"tag": "Vendor Bills"
+	},
+	{
+		"id": "vendor_bills_update",
+		"method": "PUT",
+		"path": "/v3/vendor-bills/{id}/",
+		"tag": "Vendor Bills"
+	},
+	{
+		"id": "vendor_bills_partial_update",
+		"method": "PATCH",
+		"path": "/v3/vendor-bills/{id}/",
+		"tag": "Vendor Bills"
+	},
+	{
+		"id": "vendor_bills_create_payment_create",
+		"method": "POST",
+		"path": "/v3/vendor-bills/{id}/create-payment/",
+		"tag": "Vendor Bills"
+	},
+	{
+		"id": "vendor_bills_reverse_create",
+		"method": "POST",
+		"path": "/v3/vendor-bills/{id}/reverse/",
+		"tag": "Vendor Bills"
+	},
+	{
+		"id": "vendor_bills_upload_file_create",
+		"method": "POST",
+		"path": "/v3/vendor-bills/{id}/upload-file/",
+		"tag": "Vendor Bills"
+	},
+	{
+		"id": "vendor_bills_void_create",
+		"method": "POST",
+		"path": "/v3/vendor-bills/{id}/void/",
+		"tag": "Vendor Bills"
+	},
+	{
+		"id": "vendor_credits_list",
+		"method": "GET",
+		"path": "/v3/vendor/credits/",
+		"tag": "Vendor Credits"
+	},
+	{
+		"id": "vendor_credits_retrieve",
+		"method": "GET",
+		"path": "/v3/vendor/credits/{id}/",
+		"tag": "Vendor Credits"
+	},
+	{
+		"id": "vendor_payments_list",
+		"method": "GET",
+		"path": "/v3/vendor/payments/",
+		"tag": "Vendor Payments"
+	},
+	{
+		"id": "vendor_payments_retrieve",
+		"method": "GET",
+		"path": "/v3/vendor/payments/{id}/",
+		"tag": "Vendor Payments"
+	},
+	{
+		"id": "vendor_payments_reverse_create",
+		"method": "POST",
+		"path": "/v3/vendor/payments/{id}/reverse/",
+		"tag": "Vendor Payments"
+	},
+	{
+		"id": "vendor_payments_void_create",
+		"method": "POST",
+		"path": "/v3/vendor/payments/{id}/void/",
+		"tag": "Vendor Payments"
+	},
+	{
+		"id": "vendors_list",
+		"method": "GET",
+		"path": "/v3/vendors/",
+		"tag": "Vendors"
+	},
+	{
+		"id": "vendors_create",
+		"method": "POST",
+		"path": "/v3/vendors/",
+		"tag": "Vendors"
+	},
+	{
+		"id": "vendors_retrieve",
+		"method": "GET",
+		"path": "/v3/vendors/{id}/",
+		"tag": "Vendors"
+	},
+	{
+		"id": "vendors_update",
+		"method": "PUT",
+		"path": "/v3/vendors/{id}/",
+		"tag": "Vendors"
+	},
+	{
+		"id": "vendors_partial_update",
+		"method": "PATCH",
+		"path": "/v3/vendors/{id}/",
+		"tag": "Vendors"
+	},
+	{
+		"id": "vendors_archive_create",
+		"method": "POST",
+		"path": "/v3/vendors/{id}/archive/",
+		"tag": "Vendors"
+	},
+	{
+		"id": "vendors_unarchive_create",
+		"method": "POST",
+		"path": "/v3/vendors/{id}/unarchive/",
+		"tag": "Vendors"
+	},
+	{
+		"id": "work_orders_list",
+		"method": "GET",
+		"path": "/v3/work-orders/",
+		"tag": "Work Orders"
+	},
+	{
+		"id": "work_orders_create",
+		"method": "POST",
+		"path": "/v3/work-orders/",
+		"tag": "Work Orders"
+	},
+	{
+		"id": "work_orders_retrieve",
+		"method": "GET",
+		"path": "/v3/work-orders/{id}/",
+		"tag": "Work Orders"
+	},
+	{
+		"id": "work_orders_update",
+		"method": "PUT",
+		"path": "/v3/work-orders/{id}/",
+		"tag": "Work Orders"
+	},
+	{
+		"id": "work_orders_partial_update",
+		"method": "PATCH",
+		"path": "/v3/work-orders/{id}/",
+		"tag": "Work Orders"
+	},
+	{
+		"id": "work_orders_cancel_create",
+		"method": "POST",
+		"path": "/v3/work-orders/{id}/cancel/",
+		"tag": "Work Orders"
+	},
+	{
+		"id": "work_order_job_costing",
+		"method": "GET",
+		"path": "/v3/work-orders/{id}/job-costing/",
+		"tag": "Work Order Job Costing"
+	},
+	{
+		"id": "work_orders_snapshots_list",
+		"method": "GET",
+		"path": "/v3/work-orders/{workorder_id}/snapshots/",
+		"tag": "Work Orders"
+	},
+	{
+		"id": "work_orders_snapshots_create",
+		"method": "POST",
+		"path": "/v3/work-orders/{workorder_id}/snapshots/",
+		"tag": "Work Orders"
+	},
+	{
+		"id": "work_orders_snapshots_retrieve",
+		"method": "GET",
+		"path": "/v3/work-orders/{workorder_id}/snapshots/{id}/",
+		"tag": "Work Orders"
+	},
+	{
+		"id": "work_orders_snapshots_current_retrieve",
+		"method": "GET",
+		"path": "/v3/work-orders/{workorder_id}/snapshots/current/",
+		"tag": "Work Orders"
+	},
+	{
+		"id": "work_orders_status_create",
+		"method": "POST",
+		"path": "/v3/work-orders/{workorder_id}/status/",
+		"tag": "Work Orders"
+	},
+	{
+		"id": "work_orders_activities_list",
+		"method": "GET",
+		"path": "/v3/work-orders/activities/",
+		"tag": "Work Order Activities"
+	},
+	{
+		"id": "work_orders_activities_retrieve",
+		"method": "GET",
+		"path": "/v3/work-orders/activities/{id}/",
+		"tag": "Work Order Activities"
+	},
+	{
+		"id": "work_orders_create_from_inspection_create",
+		"method": "POST",
+		"path": "/v3/work-orders/create-from-inspection/",
+		"tag": "Work Orders"
+	},
+	{
+		"id": "work_orders_job_costing_list",
+		"method": "GET",
+		"path": "/v3/work-orders/job-costing/",
+		"tag": "Work Order Job Costing"
+	},
+	{
+		"id": "work_orders_time_logs_list",
+		"method": "GET",
+		"path": "/v3/work-orders/time-logs/",
+		"tag": "Work Order Time Log"
+	},
+	{
+		"id": "work_orders_time_logs_retrieve",
+		"method": "GET",
+		"path": "/v3/work-orders/time-logs/{id}/",
+		"tag": "Work Order Time Log"
+	},
+	{
+		"id": "work_orders_time_logs_timeline_retrieve",
+		"method": "GET",
+		"path": "/v3/work-orders/time-logs/{id}/timeline/",
+		"tag": "Work Order Time Log"
+	},
+	{
+		"id": "work_orders_types_list",
+		"method": "GET",
+		"path": "/v3/work-orders/types/",
+		"tag": "Work Order Types"
+	},
+	{
+		"id": "work_orders_types_retrieve",
+		"method": "GET",
+		"path": "/v3/work-orders/types/{id}/",
+		"tag": "Work Order Types"
+	},
+	{
+		"id": "work_orders_types_problem_resolution_codes_retrieve",
+		"method": "GET",
+		"path": "/v3/work-orders/types/{id}/problem-resolution-codes/",
+		"tag": "Work Order Types"
+	},
+	{
+		"id": "work_orders_types_problems_list",
+		"method": "GET",
+		"path": "/v3/work-orders/types/problems/",
+		"tag": "Work Order Problems"
+	},
+	{
+		"id": "work_orders_types_problems_retrieve",
+		"method": "GET",
+		"path": "/v3/work-orders/types/problems/{id}/",
+		"tag": "Work Order Problems"
+	},
+	{
+		"id": "work_orders_types_resolutions_list",
+		"method": "GET",
+		"path": "/v3/work-orders/types/resolutions/",
+		"tag": "Work Order Resolutions"
+	},
+	{
+		"id": "work_orders_types_resolutions_retrieve",
+		"method": "GET",
+		"path": "/v3/work-orders/types/resolutions/{id}/",
+		"tag": "Work Order Resolutions"
+	}
+]

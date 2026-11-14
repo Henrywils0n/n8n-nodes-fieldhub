@@ -1,50 +1,31 @@
 import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
-import { userDescription } from './resources/user';
-import { companyDescription } from './resources/company';
+import { properties } from './properties';
+import { baseUrlExpression } from './urls';
 
 export class Fieldhub implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Fieldhub',
+		displayName: 'FieldHub',
 		name: 'fieldhub',
 		icon: { light: 'file:fieldhub.svg', dark: 'file:fieldhub.dark.svg' },
 		group: ['transform'],
-		version: 1,
+		version: [1, 1.1],
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Interact with the Fieldhub API',
-		defaults: {
-			name: 'Fieldhub',
-		},
+		description: 'Manage FieldHub accounts, work orders, inventory, billing, and reports',
+		defaults: { name: 'FieldHub' },
 		usableAsTool: true,
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],
-		credentials: [{ name: 'fieldhubApi', required: true }],
-		requestDefaults: {
-			baseURL: 'https://api.wilsons.fieldhub-sandbox.com/v3',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-		},
-		properties: [
+		credentials: [
 			{
-				displayName: 'Resource',
-				name: 'resource',
-				type: 'options',
-				noDataExpression: true,
-				options: [
-					{
-						name: 'User',
-						value: 'user',
-					},
-					{
-						name: 'Company',
-						value: 'company',
-					},
-				],
-				default: 'user',
+				name: 'fieldhubApi',
+				required: true,
 			},
-			...userDescription,
-			...companyDescription,
 		],
+		requestDefaults: {
+			baseURL: baseUrlExpression,
+			headers: { Accept: 'application/json' },
+			timeout: 30000,
+		},
+		properties,
 	};
 }
