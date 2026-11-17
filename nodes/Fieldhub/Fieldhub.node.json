@@ -1,5 +1,5 @@
 {
-	"node": "n8n-nodes-fieldhub",
+	"node": "n8n-nodes-fieldhub.fieldhub",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": ["Sales"],

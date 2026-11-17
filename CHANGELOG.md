@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4
+
+- Correct the node codex identifier to `n8n-nodes-fieldhub.fieldhub` so it matches the package and internal node name.
+
 ## 0.1.3
 
 - Temporarily disable OAuth2: offer and register API Token authentication only, exclude the OAuth2 credential from the npm archive, and reject saved OAuth2 selections with migration instructions. Keep the OAuth2 source for later re-enablement.
